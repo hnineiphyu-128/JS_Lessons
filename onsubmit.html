@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>On Submit Lesson</title>
+	<script type="text/javascript">
+		function check() {
+			var pwd = document.myform.pwd.value;
+			var cpwd = document.myform.cpwd.value;
+
+			if (pwd == cpwd) {
+				return true;
+			}else{
+				document.getElementById('error').textContent = "Password And Confirm Password Does Not Match!!!!";
+				return false;
+			}
+		}
+	</script>
+</head>
+<body>
+
+	<h3>Registration From</h3>
+	<label id="error" style="color: red;"></label><br>
+
+	<form name="myform" action="register.html" method="post" onsubmit="return check()">
+		Name : <input type="text" name="name"><br>
+		Password : <input type="password" name="pwd"><br>
+		Confirm Password : <input type="password" name="cpwd"><br>
+		<input type="submit" value="Register">
+	</form>
+
+</body>
+</html>

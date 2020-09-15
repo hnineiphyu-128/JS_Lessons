@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Switch Case</title>
+</head>
+<body>
+
+	<p id="demo"></p>
+
+	<script type="text/javascript">
+		let day;
+		var today = new	Date().getDay();
+		// Sunday => 1
+		// Monday => 2
+		// Tuesday => 3
+		// Wednesday => 4
+		// Thursday => 5
+		// Friday => 6
+		// Saturday => 7
+		// switch(today){
+		// 	case 0:
+		// 		day = "Sunday";
+		// 		break;
+		// 	case 1:
+		// 		day = "Monday";
+		// 		break;
+		// 	case 2:
+		// 		day = "Tuesday";
+		// 		break;
+		// 	case 3:
+		// 		day = "Wednesday";
+		// 		break;
+		// 	case 4:
+		// 		day = "Thursday";
+		// 		break;
+		// 	case 5:
+		// 		day = "Friday";
+		// 		break;	
+		// 	default :
+		// 		day = "Saturday";
+		// }
+		switch(today){
+			case 0:
+			case 6:
+				day = "This is Weekend";
+				break;
+	
+			case 4:
+			case 5:
+				day = "Soon It is Weekend";
+				break;
+
+			default :
+				day = "Looking Forward To The Weekend";
+		}
+		document.getElementById("demo").innerHTML=day;
+	</script>
+</body>
+</html>

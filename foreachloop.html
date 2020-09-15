@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Foreach Loop</title>
+</head>
+<body>
+	<h1>Idol Lists</h1>
+	<p id="demo"></p>
+	<script type="text/javascript">
+		var mytodo=["Xiao Xhan","Wang Yibo","Yang Yang","Krist","Singto","Kim Soo Hyun","Lee Jong Gi"];
+		var list;
+		list="<ul>";
+		mytodo.forEach(function (todo) {
+			// list+="<li>"+todo+"</li>";
+			list+=`<li>${todo}</li>`;
+		})
+		list+="</ul>";
+		document.getElementById('demo').innerHTML=list;
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Validation</title>
+	<script type="text/javascript">
+		function Check() {
+			var name = "admin";
+			var pwd = "admin";
+
+			var username = document.getElementById('username').value;
+			var password = document.getElementById('password').value;
+
+			if (username == name && password == pwd) {
+				document.write("Login Success!");
+			}else{
+				document.write("Login Failed!");
+			}
+		}
+	</script>
+</head>
+<body>
+
+	<fieldset>
+		<legend>Personal Information</legend>
+		UserName:<input type="text" id="username" name=""><br>
+		Password:<input type="password" id="password" name=""><br>
+		<input type="submit" value="Check" onclick="Check()">
+		
+	</fieldset>
+
+</body>
+</html>

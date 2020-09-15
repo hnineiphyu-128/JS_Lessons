@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+
+		//HigherOrder Function
+		function add(a){
+			return function (b) {
+				return a+b
+			}
+		}
+		var two=add(3);
+		var mytwo=two(5);
+		console.log(mytwo);
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

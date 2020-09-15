@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gold Calculator</title>
+</head>
+<body>
+
+	<div style="margin: 50px 0 0 100px;">
+		<fieldset style="width: 300px; padding: 30px;">
+			<legend style="text-align: center;"> Gold Calculator </legend>
+			<label for="gram"> Gram : </label>
+			<input type="number" name="gram" id="gram" readonly=""> g <br><br>
+			<label for="price"> Price : </label>
+			<input type="text" name="price" id="price" value="1308500"> MMK <br><br><br>
+			<input type="submit" value="Calculate" onclick="Calculate()">
+		</fieldset> 
+	</div>
+	<div id="result" style="margin: 50px 0 0 100px;">
+		<fieldset style="width: 300px; padding: 30px; margin-top: 30px;">
+			<legend style="text-align: center;"> Result </legend>
+			<label for="kyat"> Kyat : </label>
+			<input type="text" name="kyat" id="kyat"> <br><br>
+			<label for="pae"> Pae : </label>
+			<input type="text" name="pae" id="pae"> <br><br>
+			<label for="ywae"> Ywae : </label>
+			<input type="text" name="ywae" id="ywae"> <br><br>
+			<label for="total"> Total : </label>
+			<input type="text" name="total" id="total" readonly=""> <br><br>
+		</fieldset>
+	</div>
+
+	<script type="text/javascript">
+		document.getElementById("result").style.visibility = "hidden";
+		 var gram=parseInt(prompt("Enter Gram:"));
+		 document.getElementById('gram').value=gram;
+		 function Calculate() {
+		 	// alert("Xiao Zhan");
+			document.getElementById("result").style.visibility = "visible";
+		 	var price = parseInt(document.getElementById('price').value);
+		 	// alert(price);
+		 	var k = gram/16.6;
+
+		 	var kyat = Math.floor(k);
+
+		 	var p = (k - kyat)*16;
+
+		 	var pae = Math.floor(p);
+
+		 	var p = (p - pae)*8;
+
+		 	var ywae = Math.floor(p);
+
+		 	document.getElementById('kyat').value=kyat +" Kyat";
+		 	document.getElementById('pae').value=pae +" Pae";
+		 	document.getElementById('ywae').value=ywae +" Ywae";
+
+		 	var total = Math.floor(( kyat + (pae/16) + (ywae/128) ) * price);
+
+
+		 	document.getElementById('total').value=total +" MMK";
+
+
+
+		 }
+
+	</script>
+
+</body>
+</html>

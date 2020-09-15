@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exam Marks</title>
+	<script type="text/javascript">
+		function check() {
+			var myan=parseInt(document.myform.myan.value);
+			var eng=parseInt(document.myform.eng.value);
+			var maths=parseInt(document.myform.maths.value);
+
+			console.log("Myanmar :"+myan+" English :"+eng+" Maths :"+maths);
+
+			if (myan>=40 && eng>=40 && maths>=40) {
+				
+				if (myan>=80 ||eng>=80 || maths>=80) {
+					alert("This Student is Disction!");
+				}
+				else{
+					alert("This Student is Passed!");
+				}
+			}
+			else{
+				alert("This Student is Failed!");
+			}
+			
+		}
+	</script>
+</head>
+<body>
+	
+	<form name="myform">
+		<label for="myan">Myanmar</label>
+		<input type="number" name="myan" id="myan"><br><br>
+
+		<label for="eng">English</label>
+		<input type="number" name="eng" id="eng"><br><br>
+		
+		<label for="maths">Maths</label>
+		<input type="number" name="maths" id="maths"><br><br> 	
+
+		<button type="submit" onclick="check()">check</button>
+	</form> 
+
+</body>
+</html>
